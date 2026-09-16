@@ -4,7 +4,7 @@
 
 // Dangerous use of eval() with user input
 function unsafeEval(userInput) {
-    return eval(userInput);
+    throw new Error("Dynamic evaluation of caller-controlled input is not supported");
 }
 
 // DOM-based XSS via innerHTML
