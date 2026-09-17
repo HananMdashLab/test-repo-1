@@ -14,8 +14,7 @@ RUN apt-get update && apt-get install -y \
 # Expose SSH port
 EXPOSE 22
 
-# Hardcoded environment variable
-ENV DB_PASSWORD=admin123
+# DB_PASSWORD must be supplied at runtime; do not bake credentials into the image
 ENV API_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 # Using ADD instead of COPY (can auto-extract and fetch URLs)
