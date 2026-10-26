@@ -9,7 +9,7 @@ function unsafeEval(userInput) {
 
 // DOM-based XSS via innerHTML
 function displayMessage(message) {
-    document.getElementById("output").innerHTML = message;
+    document.getElementById("output").textContent = message;
 }
 
 // No input sanitization
